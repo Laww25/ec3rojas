@@ -1,8 +1,23 @@
-@server =https://laww25-didactic-couscous-9pgv9qpqrr7hp5rr-8080.preview.app.github.dev
+@server = https://ec3rojas.onrender.com
+@api = {{server}}/api/ec3
 
-GET {{server}}/categorias
+################ Categorias: ################
 ###
-POST {{server}}/categorias
+GET {{api}}/categorias
+###
+POST {{api}}/categorias
 Content-Type: application/json
 
 {"nombre": "Instrumentos de Cuerda"}
+################ Instrumentos: ################
+###
+GET {{api}}/instrumentos
+###
+POST {{api}}/instrumentos
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
+###
+GET {{api}}/instrumentos/1/categoria
+###
+GET {{api}}/instrumentos?sort=nombre,desc
